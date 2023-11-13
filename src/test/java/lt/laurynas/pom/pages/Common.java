@@ -31,9 +31,8 @@ public class Common {
 
     public static String getTextFromElement(By locator) {
         return getElement(locator).getText();
-    }
 
-    public static void clickOnAllProductsList(By locator) {
+    }public static void clickOnAllProductsList(By locator) {
         getElement(locator).click();
     }
 

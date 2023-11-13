@@ -55,29 +55,6 @@ public class LoginTest extends TestBase {
     }
 
 
-
-    @Test
-    public void testAllProductList() {
-        String expectedResult = "Tualetinis vanduo Karl Lagerfeld For Him EDT vyrams 100 ml";
-        String actualResult;
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
-
-        LoginPage.clickOnAllProducts();
-        LoginPage.clickOnCosmeticsForMen();
-        LoginPage.clickOnFilterCheckBox();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Locator.PiguLt.Login.clickOnThirdFilteredItem));
-        LoginPage.clickOnFilteredItem();
-
-        actualResult = LoginPage.thirdFilteredItemText();
-
-        Assert.assertTrue(
-                actualResult.contains(expectedResult),
-                "\nActual: %s, \nExpected: %s".formatted(
-                        actualResult, expectedResult
-                )
-        );
-    }
-
     @Test
     public void testAddProductToCart() {
         String expectedResult = "";

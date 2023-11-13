@@ -29,26 +29,6 @@ public class LoginPage {
         return Common.getTextFromElement(Locator.PiguLt.Login.findErrorMessage);
     }
 
-    public static void clickOnAllProducts() {
-        Common.clickOnAllProductsList(Locator.PiguLt.Login.clickOnAllProducts);
-    }
-
-    public static void clickOnCosmeticsForMen() {
-        Common.clickOnTextCosmeticsForMen(Locator.PiguLt.Login.clickOnText);
-    }
-
-    public static void clickOnFilterCheckBox() {
-        Common.clickOnFilterBox(Locator.PiguLt.Login.clickOnFilterCheckBox);
-    }
-
-    public static void clickOnFilteredItem() {
-        Common.clickOnFilteredItem(Locator.PiguLt.Login.clickOnThirdFilteredItem);
-    }
-
-    public static String thirdFilteredItemText() {
-        return Common.getTextFromElement(Locator.PiguLt.Login.thirdItemText);
-    }
-
 //    public static void clickOnTopDeals() {
 //        Common.clickOnTopDealsButton(Locator.PiguLt.Login.clickOnTopDeals);
 //    }
