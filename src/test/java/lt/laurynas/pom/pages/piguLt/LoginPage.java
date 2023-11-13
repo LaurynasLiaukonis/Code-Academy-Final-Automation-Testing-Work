@@ -29,22 +29,6 @@ public class LoginPage {
         return Common.getTextFromElement(Locator.PiguLt.Login.findErrorMessage);
     }
 
-    public static void enterValueIntoSearchBar(String searchValue) {
-        Common.sendKeystoElement(Locator.PiguLt.Login.enterValueIntoSearchBar, searchValue);
-    }
-
-    public static void clickOnSearchButton() {
-        Common.clickOnButton(Locator.PiguLt.Login.clickOnSearchButton);
-    }
-
-    public static void clickOnFirstItem() {
-        Common.clickOnButton(Locator.PiguLt.Login.clickOnFirstItem);
-    }
-
-    public static String firstItemText() {
-        return Common.getTextFromElement(Locator.PiguLt.Login.firstItemText);
-    }
-
     public static void clickOnAllProducts() {
         Common.clickOnAllProductsList(Locator.PiguLt.Login.clickOnAllProducts);
     }
@@ -64,4 +48,8 @@ public class LoginPage {
     public static String thirdFilteredItemText() {
         return Common.getTextFromElement(Locator.PiguLt.Login.thirdItemText);
     }
+
+//    public static void clickOnTopDeals() {
+//        Common.clickOnTopDealsButton(Locator.PiguLt.Login.clickOnTopDeals);
+//    }
 }

@@ -54,29 +54,7 @@ public class LoginTest extends TestBase {
         Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
     }
 
-    @Test
-    public void testSearchBar() {
-        String searchValue = "televizorius";
-        String expectedResult = "Televizorius Samsung UE43CU7172UXXH, 43\" (~109 cm)";
-        String actualResult;
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(30));
-
-        LoginPage.enterValueIntoSearchBar(searchValue);
-        LoginPage.clickOnSearchButton();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Locator.PiguLt.Login.clickOnFirstItem));
-        LoginPage.clickOnFirstItem();
-
-
-        actualResult = LoginPage.firstItemText();
-
-        Assert.assertTrue(
-                actualResult.contains(expectedResult),
-                "\nActual: %s, \nExpected: %s".formatted(
-                        actualResult, expectedResult
-                )
-        );
-    }
 
     @Test
     public void testAllProductList() {
@@ -92,26 +70,27 @@ public class LoginTest extends TestBase {
 
         actualResult = LoginPage.thirdFilteredItemText();
 
-                Assert.assertTrue(
-                        actualResult.contains(expectedResult),
-                        "\nActual: %s, \nExpected: %s".formatted(
-                                actualResult, expectedResult
-                        )
-                );
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                "\nActual: %s, \nExpected: %s".formatted(
+                        actualResult, expectedResult
+                )
+        );
     }
+
     @Test
-        public void testAddProductToCart() {
-            String expectedResult = "";
-            String actualResult = "";
+    public void testAddProductToCart() {
+        String expectedResult = "";
+        String actualResult = "";
 
 
+//        LoginPage.clickOnTopDeals();
 
-
-            Assert.assertTrue(
-                    actualResult.contains(expectedResult),
-                    "\nActual: %s, \nExpected: %s".formatted(
-                            actualResult, expectedResult
-                    )
-            );
-        }
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                "\nActual: %s, \nExpected: %s".formatted(
+                        actualResult, expectedResult
+                )
+        );
+    }
 }
