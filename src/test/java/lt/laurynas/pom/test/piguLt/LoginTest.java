@@ -4,9 +4,6 @@ import lt.laurynas.pom.pages.Locator;
 import lt.laurynas.pom.pages.piguLt.LoginPage;
 import lt.laurynas.pom.test.TestBase;
 import lt.laurynas.pom.utilities.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.pagefactory.ElementLocator;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -80,4 +77,41 @@ public class LoginTest extends TestBase {
                 )
         );
     }
+
+    @Test
+    public void testAllProductList() {
+        String expectedResult = "Tualetinis vanduo Karl Lagerfeld For Him EDT vyrams 100 ml";
+        String actualResult;
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
+
+        LoginPage.clickOnAllProducts();
+        LoginPage.clickOnCosmeticsForMen();
+        LoginPage.clickOnFilterCheckBox();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locator.PiguLt.Login.clickOnThirdFilteredItem));
+        LoginPage.clickOnFilteredItem();
+
+        actualResult = LoginPage.thirdFilteredItemText();
+
+                Assert.assertTrue(
+                        actualResult.contains(expectedResult),
+                        "\nActual: %s, \nExpected: %s".formatted(
+                                actualResult, expectedResult
+                        )
+                );
+    }
+    @Test
+        public void testAddProductToCart() {
+            String expectedResult = "";
+            String actualResult = "";
+
+
+
+
+            Assert.assertTrue(
+                    actualResult.contains(expectedResult),
+                    "\nActual: %s, \nExpected: %s".formatted(
+                            actualResult, expectedResult
+                    )
+            );
+        }
 }

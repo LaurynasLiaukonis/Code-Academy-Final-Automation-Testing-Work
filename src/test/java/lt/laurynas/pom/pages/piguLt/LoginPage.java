@@ -44,4 +44,24 @@ public class LoginPage {
     public static String firstItemText() {
         return Common.getTextFromElement(Locator.PiguLt.Login.firstItemText);
     }
+
+    public static void clickOnAllProducts() {
+        Common.clickOnAllProductsList(Locator.PiguLt.Login.clickOnAllProducts);
+    }
+
+    public static void clickOnCosmeticsForMen() {
+        Common.clickOnTextCosmeticsForMen(Locator.PiguLt.Login.clickOnText);
+    }
+
+    public static void clickOnFilterCheckBox() {
+        Common.clickOnFilterBox(Locator.PiguLt.Login.clickOnFilterCheckBox);
+    }
+
+    public static void clickOnFilteredItem() {
+        Common.clickOnFilteredItem(Locator.PiguLt.Login.clickOnThirdFilteredItem);
+    }
+
+    public static String thirdFilteredItemText() {
+        return Common.getTextFromElement(Locator.PiguLt.Login.thirdItemText);
+    }
 }

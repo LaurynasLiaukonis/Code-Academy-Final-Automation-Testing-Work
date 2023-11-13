@@ -18,6 +18,12 @@ public class Locator {
             public static By clickOnFirstItem = By.xpath(
                     "//a[@class='product-image-container'][1]");
             public static By firstItemText = By.xpath("//h1[@class='c-product__name']");
+            public static By clickOnAllProducts = By.xpath("//span[text()='Visos prekės']");
+            public static By clickOnText = By.xpath("//span[text()='Kosmetika vyrams']");
+            public static By clickOnFilterCheckBox = By.xpath("//label[@for='itemcategory353']");
+            public static By clickOnThirdFilteredItem = By.xpath(
+                    "//img[@title='Tualetinis vanduo Karl Lagerfeld For Him EDT vyrams 100 ml']");
+            public static By thirdItemText = By.xpath("//h1[@class='c-product__name']");
         }
         }
     }

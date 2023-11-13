@@ -32,4 +32,20 @@ public class Common {
     public static String getTextFromElement(By locator) {
         return getElement(locator).getText();
     }
+
+    public static void clickOnAllProductsList(By locator) {
+        getElement(locator).click();
+    }
+
+    public static void clickOnTextCosmeticsForMen(By locator) {
+        getElement(locator).click();
+    }
+
+    public static void clickOnFilterBox(By locator) {
+        getElement(locator).click();
+    }
+
+    public static void clickOnFilteredItem(By locator) {
+        getElement(locator).click();
+    }
 }
