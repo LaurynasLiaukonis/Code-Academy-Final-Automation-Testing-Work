@@ -28,8 +28,4 @@ public class LoginPage {
     public static String findErrorMessage() {
         return Common.getTextFromElement(Locator.PiguLt.Login.findErrorMessage);
     }
-
-//    public static void clickOnTopDeals() {
-//        Common.clickOnTopDealsButton(Locator.PiguLt.Login.clickOnTopDeals);
-//    }
 }

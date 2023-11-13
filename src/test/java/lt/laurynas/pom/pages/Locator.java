@@ -30,7 +30,21 @@ public class Locator {
             public static By clickOnThirdFilteredItem = By.xpath(
                     "//img[@title='Tualetinis vanduo Karl Lagerfeld For Him EDT vyrams 100 ml']");
             public static By thirdItemText = By.xpath("//h1[@class='c-product__name']");
-//            public static By clickOnTopDeals = By.xpath("");
+        }
+
+        public class AddProductToCartPage {
+            public static By clickOnAllProducts = By.xpath("//span[text()='Visos prekės']");
+            public static By clickOnText = By.xpath(
+                    "//span[text()='Mobilieji telefonai ir jų priedai,']");
+            public static By clickOnPhoneScreenSavers = By.xpath(
+                    "//img[@alt='Apsauginės plėvelės telefonams']");
+            public static By clickOnFirstItem = By.xpath(
+                    "//img[@title='DELTACO ekrano apsauga skirta " +
+                            "Apple iPhone 12/ 12 Pro 6.1, 2,5D grūdinto stiklo, 9H kietumo SCRN-20IP61a']");
+            public static By clickOnAddToCart = By.xpath(
+                    "//div[@class='c-btn--primary h-btn-intent--atc']");
+            public static By clickOnBuyButton = By.xpath("//a[@id='buy']");
+            public static By itemText = By.xpath("//div[@class='product-name']");
         }
     }
 }

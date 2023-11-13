@@ -1,16 +1,11 @@
 package lt.laurynas.pom.test.piguLt;
 
-import lt.laurynas.pom.pages.Locator;
+import lt.laurynas.pom.pages.piguLt.AddProductToCartPage;
 import lt.laurynas.pom.pages.piguLt.LoginPage;
 import lt.laurynas.pom.test.TestBase;
-import lt.laurynas.pom.utilities.Driver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 
 public class LoginTest extends TestBase {
@@ -18,7 +13,7 @@ public class LoginTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
-        LoginPage.openChrome("https://pigu.lt/lt/u/login");
+        AddProductToCartPage.openChrome("https://pigu.lt/lt/u/login");
     }
 
 
@@ -52,22 +47,5 @@ public class LoginTest extends TestBase {
 
 
         Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
-    }
-
-
-    @Test
-    public void testAddProductToCart() {
-        String expectedResult = "";
-        String actualResult = "";
-
-
-//        LoginPage.clickOnTopDeals();
-
-        Assert.assertTrue(
-                actualResult.contains(expectedResult),
-                "\nActual: %s, \nExpected: %s".formatted(
-                        actualResult, expectedResult
-                )
-        );
     }
 }

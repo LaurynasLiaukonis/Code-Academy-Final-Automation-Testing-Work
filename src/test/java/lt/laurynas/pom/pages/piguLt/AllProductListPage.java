@@ -11,7 +11,7 @@ public class AllProductListPage {
         Common.openUrl(url);
     }
     public static void clickOnAllProducts() {
-        Common.clickOnAllProductsList(Locator.PiguLt.AllProductListPage.clickOnAllProducts);
+        Common.clickOnAllProducts(Locator.PiguLt.AllProductListPage.clickOnAllProducts);
     }
 
     public static void clickOnCosmeticsForMen() {
